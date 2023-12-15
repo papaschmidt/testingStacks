@@ -1,7 +1,6 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
-  Alert,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -47,10 +46,6 @@ function Section({children, title}: SectionProps): React.JSX.Element {
     </View>
   );
 }
-
-export const printHelloWorld = () => {
-  Alert.alert('Warning!', 'Hello Friend!');
-};
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
