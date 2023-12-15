@@ -2,6 +2,7 @@ import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   Alert,
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -76,6 +77,7 @@ function App(): React.JSX.Element {
           <Section title="Step One">Hello World!</Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
+            <Button title="PRESS ME" onPress={printHello} />
           </Section>
           <Section title="Debug">
             <DebugInstructions />
