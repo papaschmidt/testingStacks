@@ -1,6 +1,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -50,6 +51,10 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
+  const printHello = () => {
+    console.info('Hello World');
+  };
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -71,6 +76,7 @@ function App(): React.JSX.Element {
           <Section title="Step One">Hello World!</Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
+            <Button title="PRESS ME" onPress={printHello} />
           </Section>
           <Section title="Debug">
             <DebugInstructions />
