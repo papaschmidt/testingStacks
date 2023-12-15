@@ -1,6 +1,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -14,7 +15,6 @@ import {
   Colors,
   DebugInstructions,
   Header,
-  LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
@@ -48,6 +48,10 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
+export const printHelloWorld = () => {
+  console.info('Hello World!');
+};
+
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -72,11 +76,11 @@ function App(): React.JSX.Element {
           <Section title="Step One">Hello World!</Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
+            <Button title={'Press This'} onPress={printHelloWorld} />
           </Section>
           <Section title="Debug">
             <DebugInstructions />
           </Section>
-          <LearnMoreLinks />
         </View>
       </ScrollView>
     </SafeAreaView>
