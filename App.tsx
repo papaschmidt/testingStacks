@@ -1,6 +1,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Alert,
   Button,
   SafeAreaView,
   ScrollView,
@@ -49,7 +50,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 export const printHelloWorld = () => {
-  console.info('Hello World!');
+  Alert.alert('Warning!', 'Hello Friend!');
 };
 
 function App(): React.JSX.Element {
