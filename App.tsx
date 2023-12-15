@@ -53,6 +53,7 @@ function App(): React.JSX.Element {
 
   const printHello = () => {
     console.info('Hello World');
+    console.info('Dan');
   };
 
   const backgroundStyle = {
