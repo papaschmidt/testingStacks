@@ -1,6 +1,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Alert,
   Button,
   SafeAreaView,
   ScrollView,
@@ -52,7 +53,7 @@ function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const printHello = () => {
-    console.info('Hello World');
+    Alert.alert('Surprise', 'Click ok');
   };
 
   const backgroundStyle = {
